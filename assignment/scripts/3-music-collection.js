@@ -50,14 +50,12 @@ function search(collection, searchCriteria) {
       for (let j = 0; j <= 2; j++) { 
         for (let k = 0; k <= 1; k++) {
       if(collection[i].tracks[j][k] == searchCriteria.trackName) { 
-          console.log(collection[i].tracks[j][k]);
-          albumsFoundBySearch.push(collection[i].tracks[j]);
-          return albumsFoundBySearch;
+          return collection[i].tracks[j][k] + ' (' + collection[i].tracks[j][k + 1] + ')' + ' by ' + collection[i].artist;
        } 
      }
     }
   }
-    return albumsFoundBySearch;
+    return 'track not found';
   }
   if (searchCriteria && searchCriteria.yearPublished && searchCriteria.artist) {
   for(let albums of collection) {
@@ -72,7 +70,7 @@ function search(collection, searchCriteria) {
   }
 
   let searchObject = {
-    trackName: 'Have One On Me',
+    trackName: 'Joga',
     artist: 'Fiona Apple', 
     yearPublished: 2012
   }
