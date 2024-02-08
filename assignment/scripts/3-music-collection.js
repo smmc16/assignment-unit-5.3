@@ -23,7 +23,13 @@ console.log(addToCollection(myCollection, 'songs', 'Adrianne Lenker', 2020));
 
 console.log(myCollection);
 
+function showCollection (collection) {
+  for(let albums of collection) {
+    console.log(albums.title + ' by '+ albums.artist + ', published in ' + albums.yearPublished)
+  }
+}
 
+showCollection(myCollection);
 
 
 
