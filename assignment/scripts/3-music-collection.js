@@ -6,7 +6,7 @@ let myCollection = [];
 console.log(myCollection);
 
 function addToCollection(collection, title, artist, yearPublished) {
-  var album = {};
+  let album = {};
   album.title = title;
   album.artist = artist;
   album.yearPublished = yearPublished;
@@ -30,6 +30,17 @@ function showCollection (collection) {
 }
 
 showCollection(myCollection);
+
+function findByArtist (collection, artist) {
+  let foundAlbumsByArtist = [];
+  for(let artists of collection) {
+    if (artists.artist == artist)
+    foundAlbumsByArtist.push(artists);
+  }
+  return foundAlbumsByArtist;
+}
+
+console.log(findByArtist(myCollection, 'Fiona Apple'));
 
 
 
