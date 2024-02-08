@@ -15,8 +15,11 @@ function addToCollection(collection, title, artist, yearPublished) {
 }
 
 console.log(addToCollection(myCollection, 'The Idler Wheel', 'Fiona Apple', 2012));
-
-
+console.log(addToCollection(myCollection, 'Have One On Me', 'Joanna Newsom', 2010));
+console.log(addToCollection(myCollection, 'Tidal', 'Fiona Apple', 1996));
+console.log(addToCollection(myCollection, 'Butterfly', 'Mariah Carey', 1997));
+console.log(addToCollection(myCollection, 'Homogenic', 'Bjork', 1997));
+console.log(addToCollection(myCollection, 'songs', 'Adrianne Lenker', 2020));
 
 console.log(myCollection);
 
