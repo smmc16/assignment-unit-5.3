@@ -79,23 +79,6 @@ function search(collection, searchCriteria) {
 
 console.log(search(myCollection, searchObject))
 
-function findTrack(collection, searchTrack) {
-  let albumsFoundBySearch = [];
-  console.log(searchTrack);
-  for(let i = 0; i <= 5; i++) {
-    for (let j = 0; j <= 2; j++) { 
-      for (let k = 0; k <= 1; k++) {
-    if(collection[i].tracks[j][k] == searchTrack) { 
-    
-        console.log(collection[i].tracks[j][k]);
-        albumsFoundBySearch.push(collection[i].tracks[j][k]);
-        return albumsFoundBySearch;
-     } 
-   }
-  }
-}
-}
-
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
