@@ -42,6 +42,26 @@ function findByArtist (collection, artist) {
 
 console.log(findByArtist(myCollection, 'Fiona Apple'));
 
+function search(collection, searchCriteria) {
+  let albumsFoundBySearch = [];
+  if (searchCriteria && searchCriteria.yearPublished && searchCriteria.artist) {
+  for(let albums of collection) {
+     if (searchCriteria.artist === albums.artist && searchCriteria.yearPublished === albums.yearPublished) {
+      albumsFoundBySearch.push(albums);
+    }
+    }
+    return albumsFoundBySearch;
+  } else {
+  return collection;
+  }
+  }
+
+  let searchObject = {
+    artist: 'Fiona Apple', 
+    yearPublished: 2010
+  }
+
+console.log(search(myCollection, searchObject))
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
